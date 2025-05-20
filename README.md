@@ -37,7 +37,7 @@ DeviceFileEvents
 <img width="1379" alt="Screenshot 2025-05-19 at 9 22 20 PM" src="https://github.com/user-attachments/assets/6ff376e9-1485-4ea9-a4b8-86494b7705a0" />
 
 
-2. Investigated DeviceProcessEvents for any activity involving the newly downloaded malicious program. Based on the evidence in the logs on May 6th shortly after the file was downloaded at "2025-05-07T02:02:14.6264638Z" it was executed which triggered a string of events. Ultimately the file executed and it launched the command line and executed the following code ""cmd.exe" /c schtasks /Create /SC DAILY /TN "UpdateHealthTelemetry" /TR "C:\ProgramData\BitSentinelCore.exe" /ST 14:00". This command then launched this secondary command "schtasks  /Create /SC DAILY /TN "UpdateHealthTelemetry" /TR "C:\ProgramData\BitSentinelCore.exe" /ST 14:00". The end result was the creation of a scheduled task named "UpdateHealthTelemetry" which provides APT with persistence in the system. 
+2. Investigated DeviceProcessEvents for any activity involving the newly downloaded malicious program. Based on the evidence in the logs on May 6th shortly after the file was downloaded at "2025-05-07T02:02:14.6264638Z" it was executed which triggered a string of events. Ultimately the file executed and it launched the command line and executed the following code ""cmd.exe" /c schtasks /Create /SC DAILY /TN "UpdateHealthTelemetry" /TR "C:\ProgramData\BitSentinelCore.exe" /ST 14:00". This command then launched this secondary command "schtasks  /Create /SC DAILY /TN "UpdateHealthTelemetry" /TR "C:\ProgramData\BitSentinelCore.exe" /ST 14:00". The end result was the creation of a scheduled task named "UpdateHealthTelemetry" which provides the APT with persistence in the system. 
 
 ```kql
 DeviceProcessEvents 
