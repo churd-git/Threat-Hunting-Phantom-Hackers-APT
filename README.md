@@ -47,7 +47,7 @@ DeviceProcessEvents
 <img width="1369" alt="Screenshot 2025-05-19 at 9 34 40 PM" src="https://github.com/user-attachments/assets/9b39fe91-eb35-481d-b74b-df8bf3826733" />
 
 
-3. After identifying that the APT executed their program to establish persistence, in order to confirm the DeviceRegistryEvents was investigated to look dor any registry changes. At "2025-05-07T02:02:14.9669902Z" there was a new RefistryValueSet associated with the BitSentinelCore.exe. The registry value name was called "BitSecSvc". This confirmed that persistence was established as planned by the attacker.
+3. After identifying that the APT executed their program to establish persistence, in order to confirm the DeviceRegistryEvents was investigated to look dor any registry changes. At "2025-05-07T02:02:14.9669902Z" there was a new RegistryValueSet associated with the BitSentinelCore.exe. The registry value name was called "BitSecSvc". This confirmed that persistence was established as planned by the attacker.
 
 ```kql
 DeviceRegistryEvents 
