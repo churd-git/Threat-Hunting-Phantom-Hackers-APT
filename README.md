@@ -26,7 +26,7 @@ Known Information:
 
 ## Steps Taken
 
-1. Searched the DeviceFileEvents for suspicious activity from "anthony-001". The primary focus was to look for activity involving new executable files that are out of the ordinary. Discovered on May 6th at "2025-05-07T02:00:36.794406Z" a user under the account name "4nth0ny!" downloaded a file named "BitSentinelCore.exe". This is a malicious file that was trying to disguise itself as sentinel anti-virus software. THe program was downloaded via command line using the command ""csc.exe" /noconfig /fullpaths @"C:\Users\4nth0ny!\AppData\Local\Temp\c5gy0jzg\c5gy0jzg.cmdline". The attackers used tcsc.exe to download the program in an attempt to disguise their actions using living off the land techniques. All this was done via remote IP "192.168.0.110" which is likely the APT's IP.
+1. Searched the DeviceFileEvents for suspicious activity from "anthony-001". The primary focus was to look for activity involving new executable files that are out of the ordinary. Discovered on May 6th at "2025-05-07T02:00:36.794406Z" a user under the account name "4nth0ny!" downloaded a file named "BitSentinelCore.exe". This is a malicious file that was trying to disguise itself as sentinel anti-virus software. The program was downloaded via command line using the command ""csc.exe" /noconfig /fullpaths @"C:\Users\4nth0ny!\AppData\Local\Temp\c5gy0jzg\c5gy0jzg.cmdline". The attackers used tcsc.exe to download the program in an attempt to disguise their actions using living off the land techniques. All this was done via remote IP "192.168.0.110" which is likely the APT's IP.
      
 ```kql
 DeviceFileEvents 
